@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Hero from './Components/Hero';
 
 
-class App extends Component {
+class Hero extends Component {
   render() {
     const { classes } = this.props;
 
 
     return (
-      <div className={classes.root}>
-
-          <Hero />
-      </div>
+      <section className={classes.root}>
+        <p> This is Hero </p>
+      </section>
     );
   }
 }
@@ -20,4 +18,4 @@ const styles = theme => ({
 root: {},
 });
 
-export default withStyles(styles, {})(App);
+export default withStyles(styles, {})(Hero);
