@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import HeroBg from '../Assets/HeroBg.jpeg';
 
 
 class Hero extends Component {
@@ -9,30 +10,16 @@ class Hero extends Component {
 
     return (
       <section className={classes.root}>
-        <div className={classes.header}>
-        </div>
-        <div className={classes.body}>
-          <div className={classes.menu}>
-          </div>
-          <div className={classes.info}>
-            <div className={classes.about}></div>
-            <div className={classes.mission}></div>
-            <div className={classes.certifications}></div>
-          </div>
-        </div>
+
       </section>
     );
   }
 }
 const styles = theme => ({
-root: {},
-header: {},
-body: {},
-menu: {},
-info: {},
-about: {},
-mission: {},
-certifications: {},
+root: {
+  backgroundImage: `url(${ HeroBg })`,
+  backgroundSize: 'cover',
+},
 });
 
 export default withStyles(styles, {})(Hero);

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Hero from './Components/Hero';
+import Main from './Components/Main';
 
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
       <div className={classes.root}>
 
           <Hero />
+          <Main />
       </div>
     );
   }
