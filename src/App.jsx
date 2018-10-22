@@ -11,9 +11,7 @@ class App extends Component {
 
     return (
       <div className={classes.root}>
-
           <Hero />
-          <Main />
       </div>
     );
   }
