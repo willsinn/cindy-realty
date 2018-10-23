@@ -5,9 +5,10 @@ import HeroBg from '../Assets/HeroBg.jpeg';
 
 
 class Hero extends Component {
-  onToggleClick(e) {
-    this.props.handleToggleClick(e);
+  handleToggleClick(e) {
+    this.props.onClick(e);
   }
+
   render() {
     const { classes } = this.props;
 
@@ -17,7 +18,7 @@ class Hero extends Component {
          <div className={classes.textContainer}>
            <p className={classes.text}> Our city is defined by the people in it. What defines you </p>
          <div className={classes.redirectButton}>
-           <button onClick={this.handleToggleClick.bind(e)}>
+           <button onClick={(e) => this.handleToggleClick.bind(this, this.props.onClick)}>
              Living
            </button>
          </div>

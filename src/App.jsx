@@ -8,50 +8,30 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      isActivePage: false,
-      pages:
+      showHero: true,
+      showMain: false,
     };
-    this.setState((isActivePage, props) => ({
-      return {
-        isActivePage:
-      }
-    })
-    this.handleToggleClick = this.handleToggleClick.bind(this);
   }
-  onToggleClick(e) {
-    e.preventDefault();
-    handleToggleClick = (e) => {
-      if (isActivePage === false) {
-        this.setState({
-        isActivePage: true
-      })} else {
-        return null;
-      }
-    }
-  }
+  handleToggleClick(e) {
+    this.setState(state => ({
+      showHero: !state.showHero
+    }));
+    this.setState(state => ({
+      showMain: !state.showMain
+    }));
 
+  }
   render() {
-    const { classes } = this.props;
-
-    const renderActiveHero = (props) => {
-      return (
-        <Hero
-          isActivePage={isActivePage}
-        />
-      )
-    }
+    const { classes, pages } = this.props;
 
 
     return (
       <div className={classes.root}>
-          <Hero
-            isActivePage='true'
-            onToggleClick={this.handleToggleClick(e)}
-          />
-          <Main
-            isActivePage='false'
-            onClick={this.handleToggleClick(e)}
-          />
+        <Hero hero={this.state.showHero} />
+        <Main main={this.state.showMain} />
+        <button >
+          {this.state.showMain ? 'Hide' : 'Show'}
+        </button>
       </div>
     );
   }
