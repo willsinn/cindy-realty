@@ -11,19 +11,16 @@ class App extends Component {
       activeIndex: 0
     };
   }
-  onClick(e) {
-    this.setState(prevState => ({
-      activeIndex: prevState.activeIndex + 1
-    }));
-  }
+
   render() {
     const { classes } = this.props;
 
 
     return (
       <div className={classes.root}>
-        <Hero hero={this.state.activeIndex} />
-        <button onClick={this.onClick.bind(this)}>Main</button>
+        <Hero hero={this.state.activeIndex}
+              handleActiveClick={this.props.handleActiveClick}/>
+
       </div>
     );
   }

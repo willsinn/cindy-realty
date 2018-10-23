@@ -8,8 +8,15 @@ class Hero extends Component {
   constructor(props) {
     super(props);
   }
+  handleActiveClick(e) {
+    this.setState(prevState => ({
+      activeIndex: prevState.activeIndex + 1
+    }));
+  }
+
   render() {
     const { classes } = this.props;
+    const activeIndex = this.state.activeIndex;
     if(this.props.hero === 0) {
       return (
         <section className={classes.root}>
@@ -17,7 +24,7 @@ class Hero extends Component {
            <div className={classes.textContainer}>
              <p className={classes.text}> Our city is defined by the people in it. What defines you </p>
            <div className={classes.redirectButton}>
-             <button onClick={(e) => this.handleToggleClick.bind(this, this.props.onClick)}>
+             <button onClick={(e) => this.props.handleActiveClick(this.state.activeIndex)}>
                Living
              </button>
            </div>
