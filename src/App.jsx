@@ -5,33 +5,25 @@ import Main from './Components/Main';
 
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      showHero: true,
-      showMain: false,
+      activeIndex: 0
     };
   }
-  handleToggleClick(e) {
-    this.setState(state => ({
-      showHero: !state.showHero
+  onClick(e) {
+    this.setState(prevState => ({
+      activeIndex: prevState.activeIndex + 1
     }));
-    this.setState(state => ({
-      showMain: !state.showMain
-    }));
-
   }
   render() {
-    const { classes, pages } = this.props;
+    const { classes } = this.props;
 
 
     return (
       <div className={classes.root}>
-        <Hero hero={this.state.showHero} />
-        <Main main={this.state.showMain} />
-        <button >
-          {this.state.showMain ? 'Hide' : 'Show'}
-        </button>
+        <Hero hero={this.state.activeIndex} />
+        <button onClick={this.onClick.bind(this)}>Main</button>
       </div>
     );
   }
