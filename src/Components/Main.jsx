@@ -9,18 +9,23 @@ class Main extends Component {
     super(props);
 
   this.state = {
-    renderActive: false
+    renderActiveMain: false
       };
+    }
+    handleTransition(page) {
+      return() => {
+
+         this.setState({renderActiveMain: true});
+
+      }
     }
 
   render() {
     const { classes } = this.props;
     var isActive = this.props.isActive;
-    var main = this.props.page;
 
-
-
-    if (this.state.renderActive === isActive) {
+    if (this.state.renderActiveMain === isActive) {
+      {this.handleTransition()}
     return (
       <section className={classes.root}>
         <div className={classes.header}>
@@ -42,10 +47,7 @@ class Main extends Component {
         </div>
       </section>
     );
-  } else {
-
-   return null;
-    }
+  }
   }
 }
 const styles = theme => ({
