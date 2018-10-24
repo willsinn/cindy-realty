@@ -5,10 +5,17 @@ import MainSloganBg from '../Assets/MainSloganBg.jpeg';
 
 
 class Main extends Component {
+  state = {
+    renderActive: 'main'
+  };
+
   render() {
     const { classes } = this.props;
+    var page = this.props.page;
 
 
+
+    if (this.state.renderActive === page) {
     return (
       <section className={classes.root}>
         <div className={classes.header}>
@@ -30,6 +37,10 @@ class Main extends Component {
         </div>
       </section>
     );
+  } else {
+
+   return null;
+    }
   }
 }
 const styles = theme => ({
