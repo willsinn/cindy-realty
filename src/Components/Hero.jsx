@@ -5,32 +5,24 @@ import HeroBg from '../Assets/HeroBg.jpeg';
 
 
 class Hero extends Component {
-  constructor(props) {
-    super(props);
-  }
-  handleActiveClick(e) {
-    this.setState(prevState => ({
-      activeIndex: prevState.activeIndex + 1
-    }));
-  }
 
   render() {
     const { classes } = this.props;
-    const activeIndex = this.state.activeIndex;
-    if(this.props.hero === 0) {
+
+    if (isActive === false) {
       return (
         <section className={classes.root}>
           <div className={classes.redirectContainer}>
            <div className={classes.textContainer}>
              <p className={classes.text}> Our city is defined by the people in it. What defines you </p>
            <div className={classes.redirectButton}>
-             <button onClick={(e) => this.props.handleActiveClick(this.state.activeIndex)}>
+             <button onClick={this.props.onTransitionPage}>
                Living
              </button>
            </div>
           </div>
         </div>
-        {this.props.hero}
+        {this.state.isActivePage}
         </section>
       );
     } else {

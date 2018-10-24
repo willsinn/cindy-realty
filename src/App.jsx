@@ -7,20 +7,29 @@ import Main from './Components/Main';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      activeIndex: 0
+      this.state = {
+      activePage: 'hero'
     };
   }
-
+  transitionPage(page) {
+    return() => {
+      this.setState({
+        activePage: page
+      });
+    }
+  }
   render() {
     const { classes } = this.props;
 
 
     return (
       <div className={classes.root}>
-        <Hero hero={this.state.activeIndex}
-              handleActiveClick={this.props.handleActiveClick}/>
-
+        <Hero
+          isActive={this.state.activePage === 'hero'}
+          onTransitionPage={this.transitionPage('main')}
+          />
+        <Main
+          isActive={this.state.activePage === 'main'}/>
       </div>
     );
   }
