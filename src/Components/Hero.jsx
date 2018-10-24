@@ -6,10 +6,15 @@ import HeroBg from '../Assets/HeroBg.jpeg';
 
 class Hero extends Component {
 
+
   render() {
     const { classes } = this.props;
+    const hero = this.props.page;
+    const active = this.props.isActive;
 
-    if (isActive === false) {
+
+
+    if (active === hero) {
       return (
         <section className={classes.root}>
           <div className={classes.redirectContainer}>
@@ -22,7 +27,6 @@ class Hero extends Component {
            </div>
           </div>
         </div>
-        {this.state.isActivePage}
         </section>
       );
     } else {
