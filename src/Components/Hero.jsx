@@ -8,7 +8,7 @@ class Hero extends Component {
     constructor(props) {
       super(props);
     this.state = {
-      renderActiveHero: true
+      heroIsActive: true
     }
   }
 
@@ -18,7 +18,7 @@ class Hero extends Component {
     const { classes } = this.props;
     var isActive = this.props.isActive;
 
-    if (this.state.renderActiveHero === isActive) {
+    if (this.state.heroIsActive === isActive) {
 
 
 
