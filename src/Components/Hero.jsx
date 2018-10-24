@@ -5,16 +5,24 @@ import HeroBg from '../Assets/HeroBg.jpeg';
 
 
 class Hero extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      renderActive: 'hero'
+    };
+
+  }
 
 
   render() {
     const { classes } = this.props;
-    const hero = this.props.page;
-    const active = this.props.isActive;
+    var isActive = this.props.isActive;
+
+    if (this.state.renderActive === isActive) {
 
 
-
-    if (active === hero) {
+      return null;
+      } else {
       return (
         <section className={classes.root}>
           <div className={classes.redirectContainer}>
@@ -29,9 +37,6 @@ class Hero extends Component {
         </div>
         </section>
       );
-    } else {
-      return null;
-
   }
 }
 }
