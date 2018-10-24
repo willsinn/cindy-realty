@@ -29,7 +29,8 @@ class App extends Component {
           onTransitionPage={this.transitionPage('main')}
           />
         <Main
-          isActive={this.state.activePage === 'main'}/>
+          isActive={this.state.activePage === 'main'}
+          />
       </div>
     );
   }
