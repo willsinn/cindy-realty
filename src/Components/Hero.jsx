@@ -5,10 +5,12 @@ import HeroBg from '../Assets/HeroBg.jpeg';
 
 
 class Hero extends Component {
-
-    state = {
-      renderActive: 'hero'
-    };
+    constructor(props) {
+      super(props);
+    this.state = {
+      isActive: true
+    }
+  }
 
 
 
@@ -16,10 +18,9 @@ class Hero extends Component {
     const { classes } = this.props;
     var page = this.props.page;
 
-    if (this.state.renderActive === page) {
-      return null;
+    if (this.state.isActive) {
 
-      } else {
+
 
       return (
         <section className={classes.root}>
@@ -35,7 +36,11 @@ class Hero extends Component {
         </div>
         </section>
       );
-  }
+
+    } else {
+
+        return null;
+      }
 }
 }
 const styles = theme => ({

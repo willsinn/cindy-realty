@@ -5,9 +5,13 @@ import MainSloganBg from '../Assets/MainSloganBg.jpeg';
 
 
 class Main extends Component {
-  state = {
-    renderActive: 'main'
-  };
+  constructor(props) {
+    super(props);
+
+  this.state = {
+    isActive: false
+      };
+    }
 
   render() {
     const { classes } = this.props;
@@ -15,7 +19,7 @@ class Main extends Component {
 
 
 
-    if (this.state.renderActive === page) {
+    if (this.state.isActive) {
     return (
       <section className={classes.root}>
         <div className={classes.header}>
