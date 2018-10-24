@@ -8,7 +8,7 @@ class Hero extends Component {
     constructor(props) {
       super(props);
     this.state = {
-      isActive: true
+      renderActive: true
     }
   }
 
@@ -16,9 +16,9 @@ class Hero extends Component {
 
   render() {
     const { classes } = this.props;
-    var page = this.props.page;
+    var isActive = this.props.isActive;
 
-    if (this.state.isActive) {
+    if (this.state.renderActive === isActive) {
 
 
 

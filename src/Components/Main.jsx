@@ -9,17 +9,18 @@ class Main extends Component {
     super(props);
 
   this.state = {
-    isActive: false
+    renderActive: false
       };
     }
 
   render() {
     const { classes } = this.props;
-    var page = this.props.page;
+    var isActive = this.props.isActive;
+    var main = this.props.page;
 
 
 
-    if (this.state.isActive) {
+    if (this.state.renderActive === isActive) {
     return (
       <section className={classes.root}>
         <div className={classes.header}>
