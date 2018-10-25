@@ -5,20 +5,13 @@ import MainSloganBg from '../Assets/MainSloganBg.jpeg';
 
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-
-  this.state = {
-    mainIsActive: false
-      };
-    }
 
 
   render() {
     const { classes } = this.props;
     var isActive = this.props.isActive;
 
-    if (this.state.mainIsActive === isActive) {
+    if (this.props.isActive === true) {
     return (
       <section className={classes.root}>
 

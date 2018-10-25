@@ -5,22 +5,10 @@ import HeroBg from '../Assets/HeroBg.jpeg';
 
 
 class Hero extends Component {
-    constructor(props) {
-      super(props);
-    this.state = {
-      heroIsActive: true
-    }
-  }
-
-
 
   render() {
     const { classes } = this.props;
-    var isActive = this.props.isActive;
-
-    if (this.state.heroIsActive === isActive) {
-
-
+    if (this.props.isActive === true) {
 
       return (
         <section className={classes.root}>
