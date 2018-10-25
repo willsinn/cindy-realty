@@ -9,7 +9,6 @@ class Hero extends Component {
   render() {
     const { classes } = this.props;
     if (this.props.isActive === true) {
-
       return (
         <section className={classes.root}>
           <div className={classes.redirectContainer}>
@@ -24,13 +23,11 @@ class Hero extends Component {
         </div>
         </section>
       );
-
     } else {
-
         return null;
       }
-}
-}
+    }
+  }
 const styles = theme => ({
 root: {
   backgroundImage: `url(${ HeroBg })`,

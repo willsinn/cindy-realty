@@ -6,13 +6,10 @@ import MainSloganBg from '../Assets/MainSloganBg.jpeg';
 
 class Main extends Component {
 
-
   render() {
     const { classes } = this.props;
-    var isActive = this.props.isActive;
-
     if (this.props.isActive === true) {
-    return (
+      return (
       <section className={classes.root}>
 
         <div className={classes.header}>
@@ -33,10 +30,12 @@ class Main extends Component {
           </div>
         </div>
       </section>
-    );
-  } else { return null;}
-  }
-}
+          );
+        } else {
+          return null;
+        }
+      }
+    }
 const styles = theme => ({
 root: {},
 header: {
