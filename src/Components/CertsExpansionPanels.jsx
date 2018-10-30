@@ -1,16 +1,76 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { ExpansionPanel, ExpansionPanelDetails, ExpansionPanelSummary } from '@material-ui/core';
+import { ExpansionPanel, ExpansionPanelDetails, ExpansionPanelSummary, Typography } from '@material-ui/core';
+import { ExpandMoreIcon } from '@material-ui/icons/ExpandMore';
 
 class CertsExpansionPanels extends Component {
+
+  state = {
+    expanded: null,
+  };
+
+  handleChange = panel => (event, expanded) => {
+    this.setState({
+      expanded: expanded ? panel : false,
+    });
+  };
   render(){
     const { classes } = this.props;
+    const { expanded } = this.state;
+
     return(
-      <div>
-        <h1 className={classes.certsHeader}> my certifications </h1>
-        <p className={classes.certsContent}>
-        Duis purus ligula, accumsan vitae risus non, vehicula dictum ante. In lobortis aliquam mollis. Suspendisse egestas nulla sed lorem facilisis, ut tincidunt ex luctus. Nam fringilla dui lacinia, condimentum nisl ut, iaculis libero. Integer molestie cursus metus non pellentesque. Suspendisse ac maximus odio. Aliquam rhoncus vel ante et placerat. Vestibulum consectetur volutpat dui non porta. Fusce ac velit non eros finibus cursus id eget neque. Sed ac vulputate tellus, et ornare purus.
-        </p>
+      <div className={classes.root}>
+        <ExpansionPanel expanded={expanded === 'panel1'} onChange={this.handleChange('panel1')}>
+          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography className={classes.heading}>General settings</Typography>
+            <Typography className={classes.secondaryHeading}>I am an expansion panel</Typography>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            <Typography>
+              Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
+              maximus est, id dignissim quam.
+            </Typography>
+          </ExpansionPanelDetails>
+        </ExpansionPanel>
+        <ExpansionPanel expanded={expanded === 'panel2'} onChange={this.handleChange('panel2')}>
+          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography className={classes.heading}>Users</Typography>
+            <Typography className={classes.secondaryHeading}>
+              You are currently not an owner
+            </Typography>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            <Typography>
+              Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar
+              diam eros in elit. Pellentesque convallis laoreet laoreet.
+            </Typography>
+          </ExpansionPanelDetails>
+        </ExpansionPanel>
+        <ExpansionPanel expanded={expanded === 'panel3'} onChange={this.handleChange('panel3')}>
+          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography className={classes.heading}>Advanced settings</Typography>
+            <Typography className={classes.secondaryHeading}>
+              Filtering has been entirely disabled for whole web server
+            </Typography>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            <Typography>
+              Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas
+              eros, vitae egestas augue. Duis vel est augue.
+            </Typography>
+          </ExpansionPanelDetails>
+        </ExpansionPanel>
+        <ExpansionPanel expanded={expanded === 'panel4'} onChange={this.handleChange('panel4')}>
+          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography className={classes.heading}>Personal data</Typography>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            <Typography>
+              Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas
+              eros, vitae egestas augue. Duis vel est augue.
+            </Typography>
+          </ExpansionPanelDetails>
+        </ExpansionPanel>
       </div>
     );
   }
@@ -21,5 +81,14 @@ certsHeader: {
   textTransform: 'uppercase',
 },
 certsContent: {},
+heading: {
+    fontSize: theme.typography.pxToRem(15),
+    flexBasis: '33.33%',
+    flexShrink: 0,
+  },
+  secondaryHeading: {
+    fontSize: theme.typography.pxToRem(15),
+    color: theme.palette.text.secondary,
+  },
 });
 export default withStyles(styles, {})(CertsExpansionPanels);
