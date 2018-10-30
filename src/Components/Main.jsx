@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import { Paper } from '@material-ui/core';
 import CindyProfile from '../Assets/CindyProfile.jpeg';
 import MainSloganBg from '../Assets/MainSloganBg.jpeg';
-import { Paper } from '@material-ui/core';
+
+import CertsAccordian from './CertsAccordian';
 
 
 class Main extends Component {
@@ -24,7 +26,7 @@ class Main extends Component {
         <div className={classes.body}>
           <div className={classes.menu}>
           </div>
-          <div className={classes.info}>
+          <div className={classes.intro}>
               <Paper className={classes.about}>
                 <h1 className={classes.aboutHeader}> about me </h1>
                 <p className={classes.aboutText}>
@@ -38,10 +40,7 @@ class Main extends Component {
                 </p>
               </Paper>
               <Paper className={classes.certs}>
-                <h1 className={classes.certsHeader}> my certifications </h1>
-                <p className={classes.certsContent}>
-                Duis purus ligula, accumsan vitae risus non, vehicula dictum ante. In lobortis aliquam mollis. Suspendisse egestas nulla sed lorem facilisis, ut tincidunt ex luctus. Nam fringilla dui lacinia, condimentum nisl ut, iaculis libero. Integer molestie cursus metus non pellentesque. Suspendisse ac maximus odio. Aliquam rhoncus vel ante et placerat. Vestibulum consectetur volutpat dui non porta. Fusce ac velit non eros finibus cursus id eget neque. Sed ac vulputate tellus, et ornare purus.
-                </p>
+                <CertsAccordian />
               </Paper>
           </div>
         </div>
@@ -70,7 +69,7 @@ headerSloganWrapper: {
 slogan: {},
 body: {},
 menu: {},
-info: {
+intro: {
   paddingRight: '15%',
   paddingLeft: '15%',
 },
@@ -85,10 +84,7 @@ missionHeader: {
 },
 missionText: {},
 certs: {},
-certsHeader: {
-  textTransform: 'uppercase',
-},
-certsContent: {},
+
 });
 
 export default withStyles(styles, {})(Main);
