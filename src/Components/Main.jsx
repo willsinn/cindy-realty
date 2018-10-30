@@ -40,6 +40,7 @@ class Main extends Component {
                 </p>
               </Paper>
               <Paper className={classes.certs}>
+              <h1 className={classes.certsHeader}> certifications </h1>
                 <CertsExpansionPanels />
               </Paper>
           </div>
@@ -84,7 +85,9 @@ missionHeader: {
 },
 missionText: {},
 certs: {},
-
+certsHeader: {
+  textTransform: 'uppercase',
+},
 });
 
 export default withStyles(styles, {})(Main);
