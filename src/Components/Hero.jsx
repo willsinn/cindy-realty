@@ -13,7 +13,7 @@ class Hero extends Component {
         <section className={classes.root}>
           <div className={classes.redirectContainer}>
            <div className={classes.textContainer}>
-             <p className={classes.text}> Our city is defined by the people in it. What defines you </p>
+             <span className={classes.text}> Our city is defined by the people in it. What defines you </span>
            <div className={classes.redirectButton}>
              <button onClick={this.props.onTransitionPage}>
                Living
