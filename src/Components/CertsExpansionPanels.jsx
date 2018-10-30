@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { ExpansionPanel, ExpansionPanelDetails, ExpansionPanelSummary } from '@material-ui/core';
 
-class CertsAccordian extends Component {
+class CertsExpansionPanels extends Component {
   render(){
     const { classes } = this.props;
     return(
@@ -22,4 +22,4 @@ certsHeader: {
 },
 certsContent: {},
 });
-export default withStyles(styles, {})(CertsAccordian);
+export default withStyles(styles, {})(CertsExpansionPanels);

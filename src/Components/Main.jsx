@@ -4,7 +4,7 @@ import { Paper } from '@material-ui/core';
 import CindyProfile from '../Assets/CindyProfile.jpeg';
 import MainSloganBg from '../Assets/MainSloganBg.jpeg';
 
-import CertsAccordian from './CertsAccordian';
+import CertsExpansionPanels from './CertsExpansionPanels';
 
 
 class Main extends Component {
@@ -40,7 +40,7 @@ class Main extends Component {
                 </p>
               </Paper>
               <Paper className={classes.certs}>
-                <CertsAccordian />
+                <CertsExpansionPanels />
               </Paper>
           </div>
         </div>
