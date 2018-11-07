@@ -7,19 +7,23 @@ class Rentals extends Component {
     const { classes } = this.props;
     return(
       <section className={classes.root}>
-        <p className={classes.rentalsText}>
-        This is the rentals section
-        </p>
-        <RentalOne/>
-        <RentalOne/>
-        <RentalOne/>
-
+        <h1 className={classes.rentalsTitle}>
+          This is the rentals section
+        </h1>
+        <div className={classes.rentalListings}>
+          <RentalOne/>
+          <RentalOne/>
+          <RentalOne/>
+        </div>
       </section>
     );
   }
 }
 const styles = theme => ({
 root: {},
-rentalsText: {},
+rentalsTitle: {},
+rentalListings: {
+  display: 'flex',
+},
 });
 export default withStyles(styles, {})(Rentals);
