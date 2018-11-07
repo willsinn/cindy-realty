@@ -16,10 +16,10 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import OneOuterFrontal from '../Assets/RentalOne/OneOuterFrontal.jpeg';
+import OneLivingroom from '../Assets/SaleOne/OneLivingroom.jpeg';
 
 
-class RentalOne extends Component {
+class SaleOne extends Component {
   state = {
     expanded: false
   };
@@ -46,7 +46,7 @@ class RentalOne extends Component {
         />
         <CardMedia
           className={classes.media}
-          image={OneOuterFrontal}
+          image={OneLivingroom}
           title="Brownstone Location Details"
         />
         <CardContent>
@@ -99,7 +99,7 @@ class RentalOne extends Component {
   }
 }
 
-RentalOne.propTypes = {
+SaleOne.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
@@ -132,4 +132,4 @@ avatar: {
   backgroundColor: red[500],
 },
 });
-export default withStyles(styles, {})(RentalOne);
+export default withStyles(styles, {})(SaleOne);

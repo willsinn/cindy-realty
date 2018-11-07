@@ -1,20 +1,35 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import SaleOne from './SaleOne';
 
 class Sales extends Component {
   render(){
     const { classes } = this.props;
     return(
-      <div className={classes.root}>
-        <p className={classes.salesText}>
+      <section className={classes.root}>
+        <h1 className={classes.salesTitle}>
           this is the sales section
-        </p>
-      </div>
+        </h1>
+        <div className={classes.salesListings}>
+          <SaleOne />
+          <SaleOne />
+          <SaleOne />
+
+        </div>
+      </section>
     );
   }
 }
 const styles = theme => ({
-root: {},
-salesText: {},
+root: {
+  paddingLeft: '5%',
+  paddingRight: '5%',
+
+},
+salesTitle: {},
+salesListings: {
+  display: 'flex',
+  justifyContent: 'space-between',
+},
 });
 export default withStyles(styles, {})(Sales);

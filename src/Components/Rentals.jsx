@@ -10,7 +10,7 @@ class Rentals extends Component {
         <h1 className={classes.rentalsTitle}>
           This is the rentals section
         </h1>
-        <div className={classes.rentalListings}>
+        <div className={classes.rentalsListings}>
           <RentalOne/>
           <RentalOne/>
           <RentalOne/>
@@ -20,10 +20,15 @@ class Rentals extends Component {
   }
 }
 const styles = theme => ({
-root: {},
+root: {
+  paddingLeft: '5%',
+  paddingRight: '5%',
+
+},
 rentalsTitle: {},
-rentalListings: {
+rentalsListings: {
   display: 'flex',
+  justifyContent: 'space-between',
 },
 });
 export default withStyles(styles, {})(Rentals);
