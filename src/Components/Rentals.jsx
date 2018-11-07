@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import RentalOne from './RentalOne';
 
 class Rentals extends Component {
   render(){
@@ -9,6 +10,10 @@ class Rentals extends Component {
         <p className={classes.rentalsText}>
         This is the rentals section
         </p>
+        <RentalOne/>
+        <RentalOne/>
+        <RentalOne/>
+
       </section>
     );
   }
