@@ -7,6 +7,8 @@ import MainSloganBg from '../Assets/MainSloganBg.jpeg';
 import About from './About';
 import Mission from './Mission';
 import Certifications from './Certifications';
+import Rentals from './Rentals';
+import Sales from './Sales';
 
 
 class Main extends Component {
@@ -41,6 +43,8 @@ class Main extends Component {
                 <Certifications />
               </Paper>
           </div>
+          <Rentals />
+          <Sales />
         </div>
       </section>
           );
