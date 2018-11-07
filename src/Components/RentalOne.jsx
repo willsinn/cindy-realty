@@ -16,6 +16,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import OneOuterFrontal from '../Assets/RentalOne/OneOuterFrontal.jpg';
 
 
 class RentalOne extends Component {
@@ -40,18 +41,17 @@ class RentalOne extends Component {
               <MoreVertIcon />
             </IconButton>
           }
-          title="Shrimp and Chorizo Paella"
-          subheader="September 14, 2016"
+          title="5 Bed, 2 Bath, Kitchen, Furnished"
+          subheader="Brownstone Location, Location, Location"
         />
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/paella.jpg"
-          title="Paella dish"
+          image={OneOuterFrontal}
+          title="Brownstone Location Details"
         />
         <CardContent>
           <Typography component="p">
-            This impressive paella is a perfect party dish and a fun meal to cook together with your
-            guests. Add 1 cup of frozen peas along with the mussels, if you like.
+            Brownstone is located in this lovely area that caters to kids (young adults, adults, hipsters, etc...). The location is convenient and reachable by ABCDE trains and is ________ distance from the heart of manhattan.
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
