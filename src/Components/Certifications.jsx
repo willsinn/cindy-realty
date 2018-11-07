@@ -5,7 +5,9 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-class CertsExpansionPanels extends Component {
+
+
+class Certifications extends Component {
 
   state = {
     expanded: null,
@@ -88,4 +90,4 @@ heading: {
     color: theme.palette.text.secondary,
   },
 });
-export default withStyles(styles, {})(CertsExpansionPanels);
+export default withStyles(styles, {})(Certifications);
