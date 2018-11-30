@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Paper } from '@material-ui/core';
 import CindyProfile from '../Assets/CindyProfile.jpeg';
 import MainSloganBg from '../Assets/MainSloganBg.jpeg';
-
+import StickyMenu from './StickyMenu';
 import About from './About';
 import Mission from './Mission';
 import Certifications from './Certifications';
@@ -25,6 +25,7 @@ class Main extends Component {
           <div className={classes.headerSloganWrapper}>
             <p className={classes.slogan}> " The Art of Living. Choosing the community, culture and people that will elevate you. "</p>
           </div>
+          <StickyMenu />
         </div>
         <div className={classes.body}>
           <div className={classes.menu}>

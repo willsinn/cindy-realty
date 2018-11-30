@@ -7,7 +7,7 @@ import withState from 'recompose/withState';
 
 const WithState = toRenderProps(withState('anchorEl', 'updateAnchorEl', null));
 
-function RenderPropsMenu() {
+function StickyMenu() {
   return (
     <WithState>
       {({ anchorEl, updateAnchorEl }) => {
@@ -39,4 +39,4 @@ function RenderPropsMenu() {
   );
 }
 
-export default RenderPropsMenu;
+export default StickyMenu;
