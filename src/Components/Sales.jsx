@@ -24,7 +24,7 @@ const styles = theme => ({
 root: {
   paddingLeft: '5%',
   paddingRight: '5%',
-
+  backgroundColor: 'blue',
 },
 salesTitle: {},
 salesListings: {

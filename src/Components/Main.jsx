@@ -54,7 +54,9 @@ class Main extends Component {
       }
     }
 const styles = theme => ({
-root: {},
+root: {
+  backgroundColor: 'yellow',
+},
 header: {
   display: 'flex',
   justifyContent: 'space-between',

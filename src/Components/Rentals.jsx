@@ -23,7 +23,7 @@ const styles = theme => ({
 root: {
   paddingLeft: '5%',
   paddingRight: '5%',
-
+  backgroundColor: 'green',
 },
 rentalsTitle: {},
 rentalsListings: {
